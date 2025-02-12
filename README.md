@@ -1,50 +1,83 @@
-# Welcome to your Expo app 👋
+# Application Articles
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+ Application mobile React Native/Expo permettant de consulter et gérer une liste d'articles avec système de favoris.
 
-## Get started
+Utilisation de l'api : https://jsonplaceholder.typicode.com/posts
 
-1. Install dependencies
+## Fonctionnalités
 
-   ```bash
-   npm install
-   ```
+- Liste des articles avec titre et description
+- Système de favoris
+- Barre de recherche
+- Navigation entre les onglets
+- Persistence des données avec AsyncStorage
+- Dark mode
 
-2. Start the app
+## Prérequis
 
-   ```bash
-    npx expo start
-   ```
+- Node.js (version 23.5.0 ou supérieure)
+- npm ou yarn
+- Expo CLI (`npm install -g expo-cli`)
+- XCode (pour iOS, Mac uniquement)
+- Android Studio (pour Android)
 
-In the output, you'll find options to open the app in a
+## Installation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Cloner le projet
 ```bash
-npm run reset-project
+git clone 
+cd 
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Installer les dépendances
+```bash
+npm install
 
-## Learn more
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Lancement de l'application
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Sur Android
 
-## Join the community
+1. Assurez-vous d'avoir Android Studio installé avec un émulateur configuré
+2. Lancez l'émulateur Android
+3. Démarrez l'application à la racine du projet :
+```bash
+npx expo start
+```
+3. Appuyez sur 'a' dans le terminal pour lancer sur Android
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Sur un appareil physique
+
+1. Téléchargez l'application Expo Go sur votre appareil (App Store ou Google Play)
+2. Lancez le projet :
+```bash
+npx expo start
+```
+3. Scannez le QR code avec :
+   - iOS : l'appareil photo
+   - Android : l'application Expo Go
+
+## Structure du projet
+
+```
+app/
+  ├── components/     # Composants réutilisables
+  ├── screens/        # Écrans de l'application
+  └── state/          # Configuration Redux
+      ├── features/   # Slices Redux
+      └── index.ts    # Store configuration
+```
+
+## État du projet avec Redux
+
+Le store Redux est configuré pour gérer :
+- Les articles favoris
+- L'état du dark mode
+
+## Persistence des données
+
+AsyncStorage est utilisé pour sauvegarder :
+- Les articles favoris
+

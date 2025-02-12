@@ -25,8 +25,8 @@ Utilisation de l'api : https://jsonplaceholder.typicode.com/posts
 
 1. Cloner le projet
 ```bash
-git clone 
-cd 
+git clone https://github.com/AdrienRov/testcasearticles.git
+cd testcasearticles
 ```
 
 2. Installer les dépendances
